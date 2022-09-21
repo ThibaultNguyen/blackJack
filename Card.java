@@ -23,5 +23,11 @@ public class Card{
             System.exit(1);
         }
     }
+
+    public int getNumber() {
+        return myNumber;
+    }
+
+    
     
 }
