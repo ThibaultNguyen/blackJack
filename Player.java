@@ -37,4 +37,11 @@ public class Player {
 
         return (this.getHandSum() <= 21);
     }
-}
+    
+    public int getHandSum() {
+
+        int handSum = 0;
+        int cardNum;
+        int numAces = 0;
+        
+    }
