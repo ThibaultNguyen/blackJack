@@ -44,4 +44,12 @@ public class Player {
         int cardNum;
         int numAces = 0;
         
+        for (int c = 0; c < this.hand[c].getNumber());
+
+            cardNum = this.hand[c].getNumber();
+            
+            if (cardNum == 1) {
+                numAces++;
+                handSum += 11;
+            }
     }
