@@ -64,4 +64,11 @@ public class Player {
         }
 
     return handSum;
+
+    public void printHand(boolean showFirstCard) {
+
+        System.out.printf
+        
+    }
+
     }
