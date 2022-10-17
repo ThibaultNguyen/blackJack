@@ -1,28 +1,40 @@
 
+//implementation of a deck of cards
+
 import java.util.Random;
 
 public class Deck {
 
-    //Array of cards in the deck
+    /*
+     * Array of cards in the deck
+     * top card is in the first index
+     */
     private Card[] myCards;
 
     //number of cards currently in the deck
     private int numCards;
 
-    //constructor with default deck 52 cards and no shuffling
+    /*
+     * Constructor with a default of one deck
+     * 52 cards and no shuffling
+     */
     public Deck{
+
+        // Call the other constructor,
+        // Defining one deckwithout shuffling
 
         this(1, false);
 
     }
 
-    /*constructor defining the deck
-    *how many sets of 52 cards
-    *need to be shuffled
+    /*
+     * Constructor defining the deck
+     * How many sets of 52 cards
+     * Need to be shuffled
     
-    *numDecks = the number of individual decks in this deck
-    *shuffle = whether to shuffle the cards
-    */
+     * numDecks = the number of individual decks in this deck
+     *shuffle = whether to shuffle the cards
+     */
     public Deck(int numDecks, boolean shuffle) {
 
         this.numCards = numDecks * 52;
@@ -37,10 +49,10 @@ public class Deck {
             //for each suit
             for (int s = 0; s < 4; s++) {
 
-                //for each number
+                // for each number
                 for (int n = 1; n <= 13; n++) {
 
-                    //add a new card to the deck
+                    // add a new card to the deck
                     this.myCards[c] = new Card(Suit.values()[s], n);
                     c++;
                 }
@@ -56,10 +68,10 @@ public class Deck {
 
     public void shuffle() {
 
-        //init random number generator
+        // init random number generator
         Random rng = new Random();
 
-        //temporary card
+        // temporary card
         Card temp;
 
         int j;
@@ -76,19 +88,32 @@ public class Deck {
         }
     }
 
+    /*
+    * Deal the next card from the top of the deck
+    * @return the dealt card
+    */
+
     public Card dealNextCard() {
 
+        // get the top card
         Card top = this.myCards[0];
-
+        
+        // shift all the subsequent cards to the left by one index
         for (int c = 1; c < this.numCards; c++) {
             this.myCards[c-1] = this.myCards[c];
         }
         this.myCards[this.numCards-1] = null;
 
+        // decrement the number of cards in our deck
         this.numCards--;
 
         return top;
     }
+
+    /*
+     * Print the top cards in the deck
+     * @param numToPrint the number of cards from the top of the deck to print
+     */
 
     public void printDeck(int numToPrint) {
 
