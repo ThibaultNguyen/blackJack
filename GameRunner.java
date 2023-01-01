@@ -12,5 +12,6 @@ public class GameRunner {
         //init hte player objects
         Player me = new Player("Thibault");
         Player dealer = new Player("Dealer");
+        
     }
 }
