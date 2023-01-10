@@ -18,6 +18,14 @@ public class GameRunner {
         dealer.addCard(theDeck.dealNextCard());
         me.addCard(theDeck.dealNextCard());
         dealer.addCard(theDeck.dealNextCard());
+
+        //print initial hands
+        System.out.println("Cards are dealt\n");
+        me.printHand(true);
+        dealer.printHand(false);
+        System.out.println("\n");
+
+        
         
     }
 }
