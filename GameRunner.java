@@ -25,7 +25,15 @@ public class GameRunner {
         dealer.printHand(false);
         System.out.println("\n");
 
-        
+        // flags fro when each player is finished hitting
+        boolean meDone = false;
+        boolean dealerDone = false;
+        String ans;
+
+        while (!meDone || !dealerDone) {
+
+            
+        }
         
     }
 }
