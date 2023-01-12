@@ -32,8 +32,29 @@ public class GameRunner {
 
         while (!meDone || !dealerDone) {
 
+            // player's turn
+            if(!meDone) {
+
+                System.out.print("Hit or Stay ? (Enter H or S): ");
+                ans = sc.next();
+                System.out.println();
+
+                // if the player hits
+                if (ans.compareToIgnore("H") == 0) {
+
+                    // add next card in the deck
+                    // and store whether player busted
+                    meDone = !me.addCard(theDeck.dealNextCard());
+                    me.printHand(true);
+
+                } else {
+                    meDone = true;
+                }
+            }
+
             
         }
+
         
     }
 }
