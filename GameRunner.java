@@ -68,6 +68,23 @@ public class GameRunner {
             System.out.println();
         }
 
+        // close scanner
+        sc.close();
+
+        // print final hands
+        me.printHand(true);
+        dealer.printHand(true);
+
+        int mySum = me.getHandSum();
+        int dealerSum = dealer.getHandSum();
+
+        if (mySum > dealerSum && mySum <= 21 || dealerSum > 21) {
+            System.out.println("Yoiu win !");
+
+        } else {
+            System.out.println("Dealer wins !");
+        }
+
         
     }
 }
