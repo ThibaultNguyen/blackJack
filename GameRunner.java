@@ -52,7 +52,20 @@ public class GameRunner {
                 }
             }
 
-            
+            // dealer's turn
+            if (!dealerDone) {
+                if (dealer.getHandSum() < 17) {
+                    System.out.println("The dealer hits\n");
+                    dealerDone = !dealer.addCard(theDeck.dealNextCard());
+                    dealer.printHand(false);
+
+                } else {
+                    System.out.println("The dealer stays\n");
+                    dealerDone = true;
+                }
+            }
+
+            System.out.println();
         }
 
         
