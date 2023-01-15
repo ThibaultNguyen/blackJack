@@ -76,7 +76,7 @@ public class Player {
         int numAces = 0;
         
         // calculate each card's contribution to the hand sum
-        for (int c = 0; c < this.hand[c].getNumber());
+        for (int c = 0; c < this.numCards; c++) {
 
             // get the number for the current card
             cardNum = this.hand[c].getNumber();
@@ -89,6 +89,7 @@ public class Player {
             } else {
                 handSum += cardNum;
             }
+        }
     
 
         // if we have aces and our sum is > 21
