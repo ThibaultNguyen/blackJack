@@ -85,7 +85,7 @@ public class Player {
                 numAces++;
                 handSum += 11;
             } else if (cardNum > 10) {
-                hand handSum +=10;
+                handSum +=10;
             } else {
                 handSum += cardNum;
             }
