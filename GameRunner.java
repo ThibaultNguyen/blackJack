@@ -85,6 +85,5 @@ public class GameRunner {
             System.out.println("Dealer wins !");
         }
 
-        
     }
 }
