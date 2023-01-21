@@ -18,7 +18,7 @@ public class Deck {
      * Constructor with a default of one deck
      * 52 cards and no shuffling
      */
-    public Deck {
+    public Deck() {
 
         // Call the other constructor,
         // Defining one deckwithout shuffling
