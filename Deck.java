@@ -83,7 +83,7 @@ public class Deck {
             //do swap
             temp = this.myCards[i];
             this.myCards[i] = this.myCards[j];
-            this.myCards[j] = temps;
+            this.myCards[j] = temp;
             
         }
     }
