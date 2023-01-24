@@ -94,9 +94,9 @@ public class Player {
 
         // if we have aces and our sum is > 21
         // set some/all of them to value 1 instead
-        while (handSum < 21 && numAces < 0) {
-        handSum -= 10;
-        numAces--;
+        while (handSum > 21 && numAces > 0) {
+            handSum -= 10;
+            numAces--;
         }
 
     return handSum;
@@ -108,7 +108,7 @@ public class Player {
     public void printHand(boolean showFirstCard) {
 
         System.out.printf("%s's cards:\n", this.name);
-        for(int c = 0; c< this.numCards; c++) {
+        for(int c = 0; c < this.numCards; c++) {
             if (c == 0 && !showFirstCard) {
                 System.out.println(" [hidden]");
             } else {
@@ -120,4 +120,4 @@ public class Player {
         
     }
 
-    }
+}
