@@ -115,7 +115,6 @@ public class Player {
                 System.out.printf(" %s\n", this.hand[c].toString());
                 
             }
-            
             }
         }
         
