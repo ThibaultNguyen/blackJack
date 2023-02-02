@@ -40,7 +40,7 @@ public class GameRunner {
                 System.out.println();
 
                 // if the player hits
-                if (ans.compareToIgnore("H") == 0) {
+                if (ans.compareToIgnoreCase("H") == 0) {
 
                     // add next card in the deck
                     // and store whether player busted
@@ -79,7 +79,7 @@ public class GameRunner {
         int dealerSum = dealer.getHandSum();
 
         if (mySum > dealerSum && mySum <= 21 || dealerSum > 21) {
-            System.out.println("Yoiu win !");
+            System.out.println("You win !");
 
         } else {
             System.out.println("Dealer wins !");
