@@ -113,8 +113,7 @@ public class Player {
                 System.out.println(" [hidden]");
             } else {
                 System.out.printf(" %s\n", this.hand[c].toString());  
-                
-                              
+                           
             
             }
             }
