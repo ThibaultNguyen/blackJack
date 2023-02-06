@@ -112,9 +112,7 @@ public class Player {
             if (c == 0 && !showFirstCard) {
                 System.out.println(" [hidden]");
             } else {
-                System.out.printf(" %s\n", this.hand[c].toString());  
-                           
-            
+                System.out.printf(" %s\n", this.hand[c].toString());            
             }
             }
         }
