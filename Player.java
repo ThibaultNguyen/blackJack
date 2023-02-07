@@ -29,7 +29,7 @@ public class Player {
         this.name = aName;
 
         // set a player's hand to empty
-        this.emtyHand();
+        this.emptyHand();
     }
 
     /*
@@ -100,6 +100,7 @@ public class Player {
         }
 
     return handSum;
+    }
 
     /*
      * Print the cards in the player's hand
@@ -112,12 +113,9 @@ public class Player {
             if (c == 0 && !showFirstCard) {
                 System.out.println(" [hidden]");
             } else {
-                System.out.printf(" %s\n", this.hand[c].toString());  
-                          
+                System.out.printf(" %s\n", this.hand[c].toString());            
             }
             }
         }
-        
-    }
 
 }
